@@ -1,0 +1,109 @@
+/* Elements */
+fieldset {
+    border: none;
+    padding-top: 1em;
+}
+
+label{
+    margin-right: 0.5em;
+}
+
+input{
+    margin-right: 0.5em;
+}
+
+/* Colors */
+:root {
+    --panel-color: #e5e8b6; 
+    --shadow-color: #111111;
+    --interactable-color: #586994;
+    --interactable-hover-color: #7D869C;
+    --interactible-font-color: #FFFFFF;
+    --red: #945858;
+    --green: #599458;
+}
+
+.button--red {
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+.button--green {
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+/* Button */
+
+.button {
+    background-color: var(--interactable-color);
+    color: var(--interactible-font-color);
+    cursor: pointer;
+    padding: 0.5% 1% 0.5%;
+    border-radius: 5px;
+    border: medium none;
+    text-transform: uppercase;
+    margin: 20px;  
+    width: 180px;  
+    height: 50px; 
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.button:hover .btn-slide-show-text1{
+    background-color: var(--interactable-hover-color);
+    margin-left: 65px;
+}
+
+.flash-slide {   
+    border: medium none; 
+    display: inline-block;  
+    color: rgb(255, 255, 255);  
+    margin: 20px;  
+    width: 180px;  
+    height: 50px;  
+    border-radius: 10px;  
+    position: relative;  
+    overflow: hidden;  
+    text-decoration: none;  
+    text-transform: uppercase;  
+    font-family: Helvetica;  
+    text-align: center;
+}  
+        
+.flash-slide::before {  
+    content: "";  
+    position: absolute;  
+    top: -30px;  
+    left: -80px;  
+    height: 100px;  
+    width: 70px;  
+    background: rgba(255, 255, 255, 0.3);  
+    transform: rotate(20deg);
+}  
+
+.flash-slide:hover::before {  
+    left: 190px;  
+    transition: all 0.5s ease 0s;
+}  
+
+/* Panel */
+.panel {
+    margin: 5vh 5vw 5vh;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--panel-color);
+}
+
+.panel > div {
+    display: flex;
+
+}
+
+.shadowed {
+    box-shadow: 0px 0px 20px var(--shadow-color);
+}
+
+/* Errors */
+.error-text{
+    color: var(--red)
+}
